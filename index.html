@@ -1,4 +1,3 @@
-<?php ?>
 <html ng-app="igor.commute">
 
     <head>
@@ -20,7 +19,7 @@
 		
     </head>
 
-    <body>
+    <body style="background-color:black">
         <div ng-controller="showETAController">
 			
             <div class="app-header">
@@ -40,12 +39,13 @@
 						<li ng-show="x.trip == undefined && !x.loading" style="font-size:2em;margin-top: .4em;margin-bottom: .35em">No trains @</li>
 						<li ng-show="x.loading" style="font-size:2em; margin-top: .4em;margin-bottom: .35em">Loading...</li>
 						<li ng-repeat="t in x.trip | limitTo:'4'" ng-hide"seconds2Minutes(t.pre_away) == 0">
-							{{ seconds2Minutes(t.pre_away) }}<span ng-hide="$last">>></span> 
+							{{ seconds2Minutes(t.pre_away) }}
+							<span ng-hide="$last"> >> </span> 
 						</li>
 					</ul>
-					
+				
 					<span ng-show="x.trip.length > 0" ng-cloak>minutes away from</span>
-					<h2 class="station">{{x.placeName}} <span>({{ x.route_id }})</span></h2> 
+					<h2 class="station">{{x.placeName}} ({{ x.route_id }})</h2> 
 					<h2 class="direction">{{x.direction}}</h2>
 				</li>
 				
@@ -53,9 +53,12 @@
 			</ul>
 		   
         </div>
-		
+    
+    
+    
+    
     </body>
 
 </html>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="app.js"></script> 

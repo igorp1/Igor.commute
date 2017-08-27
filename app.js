@@ -17,16 +17,9 @@ route_id = Green-B
 route_id = Green-C
 route_id = Green-D
 route_id = Green-E
-
 route_id = Blue
-
 route_id = Orange
-
-
 route_id = Red
-
-
-
 */
 
 var PlacesArray = [
@@ -53,8 +46,6 @@ var PlacesArray = [
 	}
 ];
 
-
-var secureHttpGetLink = "https://igordepaula.com/secure_fetch.php?url=";
 /*****************************/
 
 var app = angular.module("igor.commute", []);
@@ -138,7 +129,8 @@ app.controller("showETAController", function($scope, $rootScope,MBTAService){
     
     //initialize controller! \(0_0)/
     init();
-})
+    
+});
 
 app.controller("pickETAController", function($scope, MBTAService){
     
@@ -151,18 +143,16 @@ app.controller("pickETAController", function($scope, MBTAService){
     
 });
 
-
 app.service("MBTAService", function($http){
-    
     
     this.getETAs = function(place){ 
 		var url = "http://realtime.mbta.com/developer/api/v2/predictionsbystop?api_key=wX9NwuHnZU2ToO7GmGR9uw&format=json&stop="+place;
-        return $http.get(secureHttpGetLink + escape(url))
+        return $http.get(url)
     }
     
     this.getLine = function(stopID){
 		var url = "http://realtime.mbta.com/developer/api/v2/stopsbyroute?api_key=wX9NwuHnZU2ToO7GmGR9uw&route="+stopID+"&format=json"
-        return $http.get(secureHttpGetLink + escape(url));
+        return $http.get(url);
     }
     
-})
+});
