@@ -1,0 +1,95 @@
+body{
+    font-family: 'Space Mono', monospace;
+}
+
+.app-header{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95vw;
+    height: 5vh;
+    padding-top: .5vh; 
+    padding-bottom: .5vh; 
+    padding-left: 2vw;
+    padding-right: 3vw;
+    border-bottom: #000 .5vh solid; 
+    color: whitesmoke;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+    .app-header span{
+        font-size: 1em;
+    }
+
+    .app-header img{
+        height: 2em;
+    }
+
+        .app-header img.alert{
+            float: right;  
+        }
+
+ul.eta-display-container{
+	top: 6.5vh;
+	padding:0;
+	list-style:none;
+	position:fixed;
+    width: 100vw; 
+    left: 0;
+	margin:0;
+    top: 6.5vh;
+    height: 93.5vh; 
+	overflow-y:scroll;
+}
+
+li.eta-display{ 
+    width: 98vw; 
+    left: 0;
+    height: 25vh;
+    padding-left: 2vw;
+    padding-top: 3vh;
+}
+
+    .eta-display ul{
+        list-style: none;
+        padding: 0;
+        margin: 0; 
+    }
+
+        .eta-display ul li{
+            display: inline-block;
+            font-size: 2em;
+        }
+
+            .eta-display ul li span{
+                display: inline-block;
+                font-size: .3em;
+				margin-right:1em;
+				margin-left:1em;
+            }
+
+            .eta-display ul li:first-child{
+                font-size: 4em;
+            } 
+
+    .eta-display h2{
+        margin: 0;
+    }
+	
+	.eta-display h2 span{
+		font-size: .5em;
+	}
+
+.eta-display-loading{
+    background-image: url(_res/loading.gif);
+    background-position: center;
+    background-size: cover;
+    position: fixed; 
+    width: 100vw; 
+    left: 0;
+    top: 6.5vh;
+    height: 93.5vh; 
+	z-index:-1;
+}
+
